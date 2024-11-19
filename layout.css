@@ -1,0 +1,45 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+p {
+  padding: 1rem;
+}
+
+.color-red {
+  background-color: red;
+}
+
+.color-blue {
+  background-color: blue;
+}
+
+.color-green {
+  background-color: green;
+}
+
+/*otetaan käytöön flex artikkeli lapsissa*/
+
+.parent {
+  display: flex; /*flex käyttöön tämän elementin lapsissa*/
+  flex-direction: row; /*tämän elementin lapset sijoitetaan samalle riville*/
+  flex-wrap: nowrap; /*lapset eivät saa sijoittua eri riveille (wrap: lapset voivat sijoittua eri riveille*/
+}
+.parent > * {
+  flex-basis: 0; /*lasten minimileveys*/
+  flex-grow: 1; /*lasten yhtä leveitä (jos flex-grow lapsissa sama*/
+  order: 2; /*lasten järjestys*/
+}
+
+/* muutetaan sinisen kapale leveys kaksinkertaiseksi */
+.parent .tuplaleveys {
+  flex-grow: 2; /*sinisen lapsen tuplaleveyteen*/
+}
+
+/*viedään kappale flexin avula ensimmaiseksi*/
+
+.parent .ekaksi {
+  order: 1;
+}
